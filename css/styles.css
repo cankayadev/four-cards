@@ -103,3 +103,15 @@ p {
     font-weight: 400;
     color: var(--grayish-blue);
 }
+
+@media (max-width: 600px) {
+    .card-wrapper {
+        border: 2px solid red;
+        grid-template-areas:
+            "supervisor"
+            "team"
+            "ideas"
+            "calculator";
+        grid-template-columns: 1fr;
+    }
+}
