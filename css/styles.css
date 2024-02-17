@@ -22,12 +22,12 @@ Farben, müssen auch geändert werden */
 }
 
 body {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: calc(100vh - .1px);
     font-family: 'Poppins', sans-serif;
     color: var(--very-dark-blue);
 }
@@ -62,6 +62,9 @@ body {
     display: flex; 
     flex-direction: column;
     align-items: flex-start;
+    --br: .325rem;
+    border-radius: var(--br);
+    border-top: var(--br) solid black; 
 }
 
 .card picture {
@@ -71,18 +74,22 @@ body {
 
 .card1 {
     grid-area: supervisor;
+    border-color: var(--cyan);
 }
 
 .card2 {
     grid-area: team;
+    border-color: var(--red);
 }
 
 .card3 {
     grid-area: ideas;
+    border-color: var(--orange);
 }
 
 .card4 {
     grid-area: calculator;
+    border-color: var(--blue);
 }
 
 h1 {
@@ -106,12 +113,7 @@ p {
 
 @media (max-width: 600px) {
     .card-wrapper {
-        border: 2px solid red;
-        grid-template-areas:
-            "supervisor"
-            "team"
-            "ideas"
-            "calculator";
-        grid-template-columns: 1fr;
+        display: flex; 
+        flex-direction: column;
     }
 }
